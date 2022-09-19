@@ -1,0 +1,12 @@
+version: '3'
+
+dotenv: ['.env']
+
+tasks:
+  build:cli:
+    cmds:
+      - go build -o ./bin/cli cmd/cli/main.go
+
+  run:cli:
+    cmds:
+      - reflex -r '\.go' -s -- sh -c 'go run ./cmd/cli'

@@ -11,7 +11,9 @@
 
 ## Miscellaneous
 
-- Set up `Task`;
+- ~~Set up `Task`;~~
 - Conteinerize it with `Docker;
 - Set up a CI pipeline with actions;
 - Setup a test suit for development and ci environment;
+- Setup the db config
+- ~~Setup the config struct~~
