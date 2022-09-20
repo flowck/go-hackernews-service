@@ -10,3 +10,15 @@ tasks:
   run:cli:
     cmds:
       - reflex -r '\.go' -s -- sh -c 'go run ./cmd/cli'
+
+  new:migration:
+    cmds:
+      - goose -s -dir ./sql/migrations create {{.CLI_ARGS}} sql
+
+  migrate:up:
+    cmds:
+      - goose -dir ./sql/migrations up
+      -
+  migrate:down:
+    cmds:
+      - goose -dir ./sql/migrations down

@@ -11,9 +11,11 @@
 
 ## Miscellaneous
 
-- Set up a CI pipeline with actions;
+- Containerize it with `Docker;
+- Setup an SQL migrations tool
+- Setup the ORM
 - Setup a test suit for development and ci environment;
-- Conteinerize it with `Docker;
+- ~~Set up a CI pipeline with actions;~~
 - ~~Set up `Task`;~~
 - ~~Setup the db config~~
 - ~~Setup the config struct~~
