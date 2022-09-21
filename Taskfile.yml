@@ -22,3 +22,10 @@ tasks:
   migrate:down:
     cmds:
       - goose -dir ./sql/migrations down
+
+  sqlboiler:
+      cmds:
+        - rm -rf ./internal/infra/models
+        - sqlboiler psql
+        - mv models ./internal/infra
+

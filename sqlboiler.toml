@@ -1,0 +1,9 @@
+[psql]
+dbname = "go_hackernews_service_development"
+host   = "localhost"
+port   = 5432
+user   = "postgres"
+pass   = "root"
+sslmode = "disable"
+# Ignore table and/or columns
+blacklist = ["goose_db_version"]
