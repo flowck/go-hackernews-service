@@ -3,7 +3,6 @@ package post
 import (
 	"context"
 	"errors"
-	"log"
 )
 
 type Service struct {
@@ -20,8 +19,12 @@ func NewService(postRepository Repository) (Service, error) {
 }
 
 func (s *Service) PublishPost(ctx context.Context, title string, content string) error {
-	log.Println("Publishing post", title, content)
-	return nil
+	newPost, err := NewPost(title, content)
+	if err != nil {
+		return err
+	}
+
+	return s.postRepository.Insert(ctx, newPost)
 }
 
 func (s *Service) EditPost(ctx context.Context, id, title, content string) (Post, error) {
